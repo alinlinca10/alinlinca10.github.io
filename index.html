@@ -234,7 +234,12 @@
         <script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
         
         <script src="./js/script.js"></script>
-
+        <script>
+            $("a.nav-link").click(function(){
+                $('button.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
+                $('.navbar-collapse').removeClass('show');
+            });
+        </script>
     </body>
 </html>
 
