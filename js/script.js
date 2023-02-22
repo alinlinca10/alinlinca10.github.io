@@ -1,15 +1,15 @@
 // ? Show toast on enter on website, once per session
 
-const toastLiveExample = document.getElementById('liveToast')
-const toast = new bootstrap.Toast(toastLiveExample)
+// const toastLiveExample = document.getElementById('liveToast')
+// const toast = new bootstrap.Toast(toastLiveExample)
 
-$(document).ready(function() {
-  if(sessionStorage.getItem('#livetoast')!=='true')
-  {
-    toast.show();
-    sessionStorage.setItem('#livetoast',true);
-  }
-});
+// $(document).ready(function() {
+//   if(sessionStorage.getItem('#livetoast')!=='true')
+//   {
+//     toast.show();
+//     sessionStorage.setItem('#livetoast',true);
+//   }
+// });
 
 // ? Initialize animate on scroll library
 
@@ -32,7 +32,7 @@ new simpleParallax(image, {
 
 // ? Rellax js
 
-var rellax = new Rellax('.rellax');
+// var rellax = new Rellax('.rellax');
 
 // ? Initialize Swiper
 
