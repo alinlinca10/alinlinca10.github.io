@@ -103,3 +103,8 @@ var swiper = new Swiper(".mySwiper", {
     }, false)
   })
 })()
+
+$("a.nav-link").click(function(){
+  $('button.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
+  $('.navbar-collapse').removeClass('show');
+});
