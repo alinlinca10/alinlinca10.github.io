@@ -6,7 +6,6 @@
 
     --primary-gradient: linear-gradient(to right, #003eff 0%, #ec00d8 100%);
 
-    /* --font-family: 'Poppins', sans-serif; */
     --font-family: 'Inter', sans-serif;
     --font-family-logo: 'Dancing Script', cursive;
 }
@@ -217,14 +216,14 @@ body span {
 
 .moving-mouse-holder .mouse-button {
     background-color: #fff;
-    width: 2px;
-    height: 10px;
+    width: 4px;
+    height: 4px;
     border-radius: 2px;
     position: absolute;
     top: 10px;
     left: 50%;
-    margin: 0 0 0 -1px;
-    animation: mouse-button-scroll 1s infinite alternate;
+    margin: 0 0 0 -2px;
+    animation: mouse-button-scroll 2s infinite;
 }
 
 @media only screen and (min-width: 768px) {
@@ -234,7 +233,7 @@ body span {
         position: absolute;
         left: 50%;
         right: 0;
-        animation: mouse-scroll 1s infinite alternate;
+        animation: mouse-scroll 2s infinite;
 
     }
 }
@@ -246,7 +245,7 @@ body span {
         position: absolute;
         left: 50%;
         right: 0;
-        animation: mouse-scroll 1s infinite alternate;
+        animation: mouse-scroll 2s infinite;
     }
 }
 
@@ -258,16 +257,23 @@ body span {
     line-height: 1em;
 }
 
-@keyframes mouse-scroll {
+/* @keyframes mouse-scroll {
     to {
         transform: translate(0, 6px);
     }
-}
+} */
 
 @keyframes mouse-button-scroll {
-    to {
-        transform: translate(0, 6px) scale(1, 0.8);
+    100% {
+        transform: translate(0, 12px);
         opacity: 0;
+    }
+    50% {
+        transform: translate(0, 11px);
+    }
+    0% {
+        opacity: 1;
+        transform: translate(0px);
     }
 }
 
