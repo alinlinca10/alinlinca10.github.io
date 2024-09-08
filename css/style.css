@@ -133,7 +133,7 @@ body a i {
 /* ! Header */
 
 #header .nav-link {
-    color: #f5f5f7;
+    color: var(--bs-emphasis-color) !important;
     font-size: 0.875rem;
 }
 
@@ -560,7 +560,6 @@ footer .content-footer {
     .number {
         position: absolute;
         margin-top: -50px;
-        color: #fff;
         opacity: .2;
         font-size: 5em;
     }
@@ -571,7 +570,6 @@ footer .content-footer {
         position: absolute;
         margin-top: -50px;
         margin-left: -30px;
-        color: #fff;
         opacity: .2;
         font-size: 5em;
     }
