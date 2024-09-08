@@ -106,10 +106,6 @@ body h1 {
     font-size: 3em;
 }
 
-body {
-    color: #fff!important;
-}
-
 body a.btn {
     text-decoration: none;
     letter-spacing: 3px;
@@ -584,4 +580,19 @@ footer .content-footer {
 .my-5 {
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+
+.opacity-30 {
+    opacity: .3;
+}
+
+.mask {
+    -webkit-mask-image: radial-gradient(ellipse 150% 200% at 50% 0%, black 0%, transparent 50%);
+    mask-image: radial-gradient(ellipse 150% 200% at 50% 0%, black 0%, transparent 50%);
+}
+
+.nav-background {
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: saturate(180%) blur(20px);
+    transition: all .3s;
 }

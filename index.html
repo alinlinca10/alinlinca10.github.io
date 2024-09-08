@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,25 +22,31 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
 
         <link href="./css/style.css" rel="stylesheet" type="text/css">
     </head>
-    <body class="bg-black">
+    <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-0" id="header" style="background-color: rgba(0,0,0,0.5); backdrop-filter: saturate(180%) blur(20px);">
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-0" id="header" style="background-color: rgba(0,0,0,0.5); backdrop-filter: saturate(180%) blur(20px);"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" id="header">
             <div class="container">
-                <a class="navbar-brand logoo logo-font-family" href="/">
+                <a class="navbar-brand logoo logo-font-family" href="./index.html">
                     Alin Lincă
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-lg-none ms-3 toggle-theme" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Toggle dark mode">
+                        <i class="bi bi-moon-fill text-white"></i>
+                    </div>
+                </div>
+
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -61,26 +67,31 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#discuss">Let's discuss.</a>
                         </li>
-                        
                     </ul>
+                </div>
+
+                <div class="d-none d-lg-block toggle-theme" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Toggle dark mode">
+                    <i class="bi bi-moon-fill text-white"></i>
                 </div>
             </div>
         </nav>
         
         <!-- ? Header -->
         
-        <div class="container-fluid vh-100 bg-black d-flex align-items-center" id="home">
-            <div class="container">
-                <div class="row vh-100 position-absolute top-0 m-0">
-                    <div class="col-md-4 px-0 my-auto text-white">
-                        <h3 data-aos="fade" data-aos-delay="50" data-aos-duration="1500" data-aos-once="true"><strong>Hello, I'm</strong></h1>
-                            <h1 style="font-size: 5rem;" data-aos="fade" data-aos-delay="100" data-aos-duration="1500" data-aos-once="true"><span class="highlight position-relative"><strong>Alin Lincă<span
-                                            class="text-primary">.</span></strong></span></h1>
-                            <p class="mt-4" data-aos="fade" data-aos-delay="150" data-aos-duration="1500" data-aos-once="true">A Web Developer with a desire to discover and learn more about technologies.
-                                Currently working on projects that use the Bootstrap library, JS ES6, jQuery, PHP with Laravel, and MySQL relational database.</p>
+        <div class="container-fluid vh-100 position-relative" id="home">
+            <div class="row h-100">
+                <div class="col-md-4 text-center mx-auto">
+                    <div class="d-flex align-items-center h-100">
+                        <div class="z-1">
+                            <h3 data-aos="fade" data-aos-delay="50" data-aos-duration="1500" data-aos-once="true"><strong>Hello, I'm</strong></h1>
+                                <h1 style="font-size: 5rem;" data-aos="fade" data-aos-delay="100" data-aos-duration="1500" data-aos-once="true"><span class="highlight position-relative"><strong>Alin Lincă<span
+                                    class="text-primary">.</span></strong></span></h1>
+                                <p class="mt-4" data-aos="fade" data-aos-delay="150" data-aos-duration="1500" data-aos-once="true">A Software Developer with a desire to discover and learn more about technologies.</p>
+                        </div>
                     </div>
-                    <div class="col-md-8 me-bg" style="background-size: 100%;" data-aos="fade" data-aos-delay="50" data-aos-duration="1500" data-aos-once="true"></div>
                 </div>
+
+                <video src="./images/pages/aurora.mp4" autoplay="" loop="" muted="" class="position-absolute w-100 h-100 object-fit-cover opacity-30 mask p-0"></video>
             </div>
             <div class="moving-mouse-holder">
                 <a href="#skillset" class="text-decoration-none">
@@ -90,17 +101,6 @@
                     <div class="text d-none d-md-block">SCROLL DOWN <br> TO EXPLORE MORE</div>
                 </a>
             </div>
-            <!-- <div class="social">
-                <a href="https://www.facebook.com/alincatalin.linca" class="p-1" target="_blank">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/alinlinca/" class="p-1" target="_blank">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=40762962874" class="p-1 pb-3" target="_blank">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
-            </div> -->
         </div>
         
         <!-- ? Skillset -->
@@ -132,7 +132,7 @@
                     <h1>Career <span class="text-primary">+</span></h1>
                 </div>
                 <div class="col-lg-6 text-center my-auto d-flex justify-content-center">
-                    <a href="/docs/CV_Lincă_Alin.pdf" target="_blank" class="btn d-flex align-items-center text-white">VIEW CV <i
+                    <a href="/docs/CV_Lincă_Alin.pdf" target="_blank" class="btn d-flex align-items-center">VIEW CV <i
                             class="bi bi-file-earmark-person-fill"></i></a>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                     <h6 class="text-primary">ABOUT ME.</h6>
                     <h1 data-aos="fade" data-aos-duration="1500" data-aos-once="true">A desire to discover and learn more about technologies</h1>
                     <div class="my-auto d-flex justify-content-start mt-5">
-                        <a href="https://www.linkedin.com/in/alin-c%C4%83t%C4%83lin-linc%C4%83-5aa0151b4/" class="btn d-flex align-items-center text-white">CONNECT WITH ME ON LINKEDIN <i
+                        <a href="https://www.linkedin.com/in/alin-c%C4%83t%C4%83lin-linc%C4%83-5aa0151b4/" class="btn d-flex align-items-center">CONNECT WITH ME ON LINKEDIN <i
                                 class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
         
         <!-- ? end Recent projects -->
                 
-        <footer class="pb-3 mt-5 bg-black" id="discuss" 
+        <footer class="pb-3 mt-5" id="discuss" 
             style="background: url('images/pages/colors.png');
             background-repeat: no-repeat;
             background-position: bottom;">
@@ -215,16 +215,16 @@
                             <a href="mailto:alinlinca10@yahoo.com"
                                 class="text-white text-decoration-none"><b>alinlinca10@gmail.com</b></a>.</p>
                         <div class="mt-4 d-flex justify-content-center">
-                            <a href="mailto:alinlinca10@yahoo.com" class="btn d-flex align-items-center text-white">EMAIL ME <i class="bi bi-envelope-fill"></i></a>
+                            <a href="mailto:alinlinca10@yahoo.com" class="btn d-flex align-items-center">EMAIL ME <i class="bi bi-envelope-fill"></i></a>
                         </div>
-                        <a href="tel:+40762962874" class="btn text-white mt-4">(+40) 762 962 874 <i class="bi bi-telephone"></i></a>
+                        <a href="tel:+40762962874" class="btn mt-4">(+40) 762 962 874 <i class="bi bi-telephone"></i></a>
                     </div>
                 </div>
                 <div class="row pt-5">
                     <div class="col-lg-6 text-center">
                         <p class="text-white">Copyright &copy; 2023. All rights reserved.</p>
                     </div>
-                    <div class="col-lg-6 text-center text-white">
+                    <div class="col-lg-6 text-center">
                         <a class="navbar-brand logo-font-family" style="font-size: 2rem;" href="/">
                             Alin Lincă
                         </a>
@@ -233,7 +233,7 @@
             </div>
         </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
@@ -247,6 +247,38 @@
                 $('button.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
                 $('.navbar-collapse').removeClass('show');
             });
+
+
+            $(document).ready(function() {
+                const theme = localStorage.getItem('theme');
+
+                if (theme === 'dark') {
+                    $('html').attr('data-bs-theme', 'dark');
+                    $('.toggle-theme .bi').removeClass('bi-sun-fill');
+                    $('.toggle-theme .bi').addClass('bi-moon-fill');
+                } else {
+                    $('html').attr('data-bs-theme', 'light');
+                    $('.toggle-theme .bi').removeClass('bi-moon-fill');
+                    $('.toggle-theme .bi').addClass('bi-sun-fill');
+                }
+            });
+
+            $(".toggle-theme").click(function() {
+                const theme = localStorage.getItem('theme');
+
+                if (theme === 'light') {
+                    localStorage.setItem('theme', 'dark');
+                    $('html').attr('data-bs-theme', 'dark');
+                    $('.toggle-theme .bi').removeClass('bi-sun-fill');
+                    $('.toggle-theme .bi').addClass('bi-moon-fill');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    $('html').attr('data-bs-theme', 'light');
+                    $('.toggle-theme .bi').removeClass('bi-moon-fill');
+                    $('.toggle-theme .bi').addClass('bi-sun-fill');
+                }
+            });
+
         </script>
     </body>
 </html>
