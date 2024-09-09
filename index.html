@@ -90,8 +90,36 @@
                     </div>
                 </div>
 
+                <div id="scene" class="position-absolute  top-0 start-0 end-0 bottom-0">
+                    <div id="stars" class="position-absolute top-0 start-0 end-0 bottom-0">
+                        <script>
+                            // Create stars
+                            for (let i = 0; i < 200; i++) {
+                                const star = document.createElement("div");
+                                star.classList.add("position-absolute", "rounded-circle");
+                                star.style.left = `${Math.random() * 100}%`;
+                                star.style.top = `${Math.random() * 100}%`;
+                                star.style.width = `${Math.round(Math.random() * 1) + 1}px`;
+                                star.style.height = star.style.width;
+                                star.style.backgroundColor = `rgba(177, 177, 177, ${Math.random()})`;
+                                document.getElementById("stars").appendChild(star);
+                            }
+                        </script>
+                    </div>
+                </div>
+                
                 <video src="./images/pages/aurora.mp4" autoplay="" loop="" muted="" class="position-absolute w-100 h-100 object-fit-cover opacity-30 mask p-0"></video>
+                <script>
+                    // Fade scene in when loaded
+                    document.querySelector("video").addEventListener("loadeddata", () => {
+                      setTimeout(() => {
+                        document.querySelector("video").playbackRate = 0.5;
+                        // document.querySelector("#scene").classList.add("!opacity-100");
+                      }, 100);
+                    });
+                </script>
             </div>
+        
             <div class="moving-mouse-holder">
                 <a href="#skillset" class="text-decoration-none">
                     <div class="mouse">
@@ -240,6 +268,7 @@
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js" integrity="sha512-qk0XupXlge1h9I63+bC7K8850xgWnUjTgSNkfLnsqc7dWdx4031UbKjKs2cuRxsNXymkSjyzSCiryVouU74zkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
         <!-- <script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         
         <script src="./js/script.js"></script>
         <script>
